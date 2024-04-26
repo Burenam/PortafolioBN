@@ -279,8 +279,8 @@ function redirectToGitHub() {
 
 
 // Establece el intervalo en milisegundos (por ejemplo, 5 segundos)
-const intervaloNormal = 250000; // Intervalo normal
-const intervaloHover = 227000; // Intervalo cuando el cursor está sobre el carrusel
+const intervaloNormal = 5000; // Intervalo normal
+const intervaloHover = 7000; // Intervalo cuando el cursor está sobre el carrusel
 
 // Función para avanzar al siguiente slider automáticamente
 function autoNextSlider() {
