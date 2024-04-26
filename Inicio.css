@@ -1,0 +1,1423 @@
+body {
+    margin-top: 150px; /* Ajusta la distancia entre el navbar y el cuerpo */
+    font-family: 'Open Sans', sans-serif;
+    background-color: black;
+    color: gainsboro;
+}
+
+/* Para los títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* -------------------------------------------------------------------------------------------*/
+
+/* Estilos navbar */
+
+.navbar {
+    background-color: black; /* Color de fondo del navbar */
+    color: #fff; /* Color del texto */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px; /* Espaciado interno horizontal del navbar */
+    position: fixed; /* Fija el navbar en la parte superior de la página */
+    top: 0; /* Alinea el navbar en la parte superior */
+    left: 0; /* Alinea el navbar en el extremo izquierdo */
+    right: 0; /* Alinea el navbar en el extremo derecho */
+    z-index: 1000; /* Asegura que el navbar esté por encima del contenido */
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.logo span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 24px; /* Ajusta el tamaño según sea necesario */
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline-flex;
+    margin-left: 20px;
+}
+
+.nav-links li:first-child {
+    margin-left: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+}
+.cv-button img {
+    max-width: 100%;
+    height: auto;
+    display: inline-flex; /* Asegura que la imagen no tenga márgenes extra */
+}
+
+.li_CVES {
+    /* Elimina cualquier ancho explícito */
+    position: relative;
+    top: 10px;
+    width: 35px;
+    display: inline-flex; /* Muestra el elemento en línea con otros elementos */
+    margin-left: 20px; /* Ajusta el espacio entre este elemento y el siguiente */
+}
+
+.li_CVEN {
+    /* Elimina cualquier ancho explícito */
+    position: relative;
+    top: 10px;
+    width: 35px;
+    display: inline-flex; /* Muestra el elemento en línea con otros elementos */
+    margin-left: 0 !important; /* Ajusta el espacio entre este elemento y el siguiente */
+}
+
+/* Estilos para el interruptor de idiomas */
+
+.language {
+    position: relative;
+    align-items: center !important;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+}
+
+.language-switch {
+    position: relative;
+    display: inline-flex;
+    width: 54px;
+    height: 27px;
+    /* top: 7px; */
+    margin-left: 7px; /* Ajusta el espacio entre el botón del currículum vitae y el interruptor de idiomas */
+    margin-right: 7px; /* Ajusta el espacio entre el botón del currículum vitae y el interruptor de idiomas */
+}
+
+.language-switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #EB8545;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #0687d5;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #EB8545;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Estilo base para los enlaces del menú */
+.nav-links li a {
+    color: #fff; /* Color del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Transición suave del zoom y del color */
+}
+
+/* Aplica un efecto de zoom y cambio de color al pasar el cursor sobre los enlaces del menú */
+.nav-links li a:hover {
+    transform: scale(1.1); /* Aplica un zoom del 10% al pasar el cursor sobre el enlace */
+    color: #4a90e2; /* Cambia el color del texto al pasar el cursor sobre el enlace */
+}
+
+/* Estilo base para las imágenes en el menú y el interruptor de idiomas */
+.nav-links li a img,
+.language-switch {
+    transition: transform 0.3s ease-in-out; /* Transición suave del zoom */
+}
+
+/* Aplica un efecto de zoom al pasar el cursor sobre las imágenes en el menú y el interruptor de idiomas */
+.nav-links li a:hover img,
+.language-switch:hover {
+    transform: scale(1.1); /* Aplica un zoom del 10% al pasar el cursor */
+}
+
+/* Estilos para el texto del idioma */
+
+
+
+/* Estilos navbar */
+
+/* -------------------------------------------------------------------------------------------*/
+
+/* -------------------------------------------------------------------------------------------*/
+
+/* Estilos HERO */
+
+.hero {
+    position: relative; /* Posiciona el componente hero de manera relativa para alinear sus elementos hijos */
+    display: flex; /* Utiliza flexbox para organizar los elementos hijos */
+    justify-content: center; /* Centra los elementos horizontalmente dentro del componente */
+    align-items: center; /* Centra los elementos verticalmente dentro del componente */
+    height: 570px; /* Establece la altura del componente hero */
+}
+
+.container-Hero {
+    display: flex; /* Utiliza flexbox para organizar los elementos hijos */
+}
+
+
+.container-Hero2 {
+    color: #0687d5;
+    padding-left: 6px;
+}
+.hero img {
+    /* Establece que la imagen ocupe la mitad del ancho del componente */
+    height: 100%; /* Permite que la altura de la imagen se ajuste automáticamente para mantener la proporción */
+    object-fit: cover; /* Escala la imagen para cubrir todo el espacio disponible sin deformarla */
+    float: right; /* Ajusta la dirección de flotación según sea necesario */
+    margin-left: 20px; /* Ajusta el margen izquierdo para separar la imagen del texto */
+    animation: floatAnimation 2s infinite alternate;
+    filter: drop-shadow(0 30px 30px rgba(0, 128, 255, 0.3)); /* Cambiamos el color de la sombra a celeste */
+}
+
+@keyframes floatAnimation {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-20px);
+    }
+}
+
+.hero-content {
+    width: 50%; /* Establece que el contenido ocupe la otra mitad del ancho del componente */
+    padding: 20px; /* Añade espacio alrededor del contenido */
+    color: #fff; /* Color del texto */
+}
+
+.hero-content h1 {
+    font-size: 36px; /* Tamaño de fuente para el título */
+    margin-bottom: 20px; /* Espaciado inferior del título */
+}
+
+.hero-content p {
+    font-size: 18px; /* Tamaño de fuente para el texto */
+    margin-bottom: 20px; /* Espaciado inferior del texto */
+}
+
+.hero-content {
+    opacity: 0; /* Inicialmente, el contenido está oculto */
+    transform: translateY(20px); /* Desplazamiento inicial hacia abajo */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Agrega transición para opacidad y transformación */
+}
+
+.hero-content.show {
+    opacity: 1; /* Hace visible el contenido */
+    transform: translateY(0); /* Devuelve el contenido a su posición original */
+}
+
+.btn {
+    display: inline-block; /* Muestra el botón como un bloque en línea */
+    padding: 10px 20px; /* Añade relleno al botón */
+    background-color: #e11289; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    text-decoration: none; /* Quita el subrayado del texto */
+    border-radius: 5px; /* Establece bordes redondeados para el botón */
+    transition: background-color 0.3s; /* Agrega una transición suave al cambiar el color de fondo */
+}
+
+.btn:hover {
+    background-color: #af0061; /* Cambia el color de fondo del botón al pasar el ratón */
+}
+
+
+/* Estilos HERO */
+
+/* -------------------------------------------------------------------------------------------*/
+
+/* -------------------------------------------------------------------------------------------*/
+
+/* Estilos HERRAMIENTAS */
+
+/* Contenedor principal */
+.tools-container {
+    border: 2px solid #000; /* Borde de color negro */
+    border-radius: 10px; /* Borde redondeado */
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+/* Animación para las herramientas tecnológicas */
+.tools-container.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s, transform 1s;
+}
+
+.tools-container {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.section-title {
+    text-align: center; /* Centra el texto */
+    font-size: 40px;
+}
+
+.intro-text1{
+    text-align: center; /* Centra el texto */
+}
+.intro-text2{
+    text-align: center; /* Centra el texto */
+    padding-bottom: 30px;
+}
+
+/* Cuadros de herramientas en línea */
+.tools-grid {
+    display: flex; /* Mostrar los cuadros en línea */
+    justify-content: center; /* Distribuir los cuadros uniformemente */
+
+}
+
+/* Estilos para cada categoría */
+.tool-category {
+    flex: 0 0 calc(22%); /* Ancho fijo para cada cuadro, ajusta el porcentaje según desees */
+    margin: 0 5px; /* Margen entre los cuadros */
+}
+
+/* Título de la categoría */
+.category-title {
+    border-bottom: 2px solid #000; /* Línea divisoria debajo del título */
+    padding-bottom: 10px; /* Espaciado entre el título y la lista */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilos HERRAMIENTAS */
+
+/* -------------------------------------------------------------------------------------------*/
+
+
+
+.ani-container {
+    height: 700px;
+    padding-top: 100px;
+}
+
+/* Define la animación */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+/* Define la animación para desaparecer */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Aplica la animación para desaparecer a la clase .hide */
+.ani-container.hide {
+    animation: fadeOut 1s ease-in-out forwards;
+}
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------------------------------------------*/
+
+/* Estilos SLIDER HERRAMIENTAS */
+
+.slider2 {
+    position: relative;
+    background-color: inherit;
+    border-radius: 0;
+    bottom: 20px;
+    top: 6px;
+    height: 100px;
+}
+
+/* Animación para el slider2 */
+.slider2.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s, transform 1s;
+}
+
+.slider2 {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.slider2 ul{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    width: max-content;
+    animation: runSlider 20s linear infinite; /* Ajusta la duración a 8 segundos */
+}
+
+.slider2 img{
+    height: 23px;
+    margin-right: 13px;
+    margin-left: 7px;
+}
+.slider2 li{
+    background-color: #292A2E;
+    width: 150px;
+    letter-spacing: 1px;
+    font-family: monospace;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px 0 10px 10px;
+    margin-right: 5px;
+    transition: width 2s, height 4s;
+}
+
+.slider2 li:hover {
+    width: 200px;
+}
+
+/* Anula la transición para ciertos elementos li */
+.slider2 li:not(.transition-item) {
+    transition: none; /* Anula la transición para todos los elementos li que no tienen la clase .transition-item */
+}
+
+.slider2{
+    overflow: hidden;
+}
+@keyframes runSlider {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-165px * 7));
+    }
+}
+
+.tool-category {
+    transition: transform 0.3s ease-in-out; /* Agrega una transición suave al transformar */
+}
+
+.tool-category:hover {
+    transform: scale(1.1); /* Escala ligeramente el elemento cuando el cursor está sobre él */
+}
+
+/* Estilos SLIDER HERRAMIENTAS */
+
+/* -------------------------------------------------------------------------------------------*/
+
+
+/* -------------------------------------------------------------------------------------------*/
+
+/* Estilos FOOTER */
+.footer {
+    background-color: #0A0A0A;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+/* Estilo base para los iconos */
+.social-links a {
+    color: #fff; /* Color de los iconos */
+    font-size: 24px; /* Tamaño de los iconos */
+    transition: font-size 0.3s ease-in-out; /* Transición suave */
+    margin-right: 10px; /* Espacio entre los iconos */
+}
+
+/* Aplica un efecto de zoom al pasar el cursor sobre los iconos */
+.social-links a:hover {
+    font-size: 28px; /* Aumenta el tamaño del icono al pasar el cursor sobre él */
+}
+
+/* Estilos FOOTER */
+
+/* -------------------------------------------------------------------------------------------*/
+
+/* -------------------------------------------------------------------------------------------*/
+
+/* Estilos SCROLLTOP */
+#scrollTopButton {
+    background-color: #EB8545;
+    border: none;
+    border-radius: 50%;
+    width: 50px; /* Ajusta el tamaño según sea necesario */
+    height: 50px; /* Ajusta el tamaño según sea necesario */
+    cursor: pointer;
+    position: fixed;
+    bottom: 80px; /* Ajusta la distancia desde el borde inferior */
+    right: 20px; /* Ajusta la distancia desde el borde derecho */
+    z-index: 9999; /* Asegura que el botón esté por encima de otros elementos */
+
+}
+
+#scrollTopButton i {
+    color: white; /* Color del ícono */
+}
+
+#scrollTopButton:hover {
+    background-color: #FFA87D; /* Color de fondo al pasar el ratón */
+}
+/* Estilos SCROLLTOP */
+
+/* -------------------------------------------------------------------------------------------*/
+
+
+/* -------------------------------------------------------------------------------------------*/
+
+/* Estilos WhatsApp */
+
+/* Estilos para el botón flotante de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px; /* Ajusta el tamaño según sea necesario */
+    height: 50px; /* Ajusta el tamaño según sea necesario */
+    background-color: green; /* Color de fondo del botón */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 9999;
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+.whatsapp-icon {
+    font-size: 30px; /* Tamaño del icono */
+    color: white; /* Color del icono */
+}
+/* Cambia el color de fondo y el tamaño del icono al pasar el ratón */
+.whatsapp-button:hover .whatsapp-icon {
+    color: #fff; /* Cambia el color del icono al pasar el ratón */
+    transform: scale(1.1); /* Aplica un zoom al icono al pasar el ratón */
+}
+
+#whatsapp-button:hover {
+    background-color: #0f5132; /* Color de fondo al pasar el ratón */
+}
+/* Estilos WhatsApp */
+
+/* -------------------------------------------------------------------------------------------*/
+
+
+/* -------------------------------------------------------------------------------------------*/
+
+/* Estilos CONTACTO */
+
+.container-contacto {
+    height: 600px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container-contacto h1 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+    width: 96%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: unset;
+    color: #007bff;
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.container-contacto h1::before,
+.container-contacto h1::after {
+    content: '[';
+    color: #EB8545; /* Color del corchete */
+    font-size: 42px;
+    animation: fadeInOut 2s ease-in-out infinite;
+}
+
+.container-contacto h1::after {
+    content: ']';
+    color: #EB8545; /* Color del corchete */
+    font-size: 42px;
+    animation: fadeInOut 2s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* Agrega una transición suave a las etiquetas */
+label {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Escala ligeramente la etiqueta cuando el cursor está sobre ella */
+label:hover {
+    transform: scale(1.1);
+}
+
+/* Agrega una transición suave a los input y textarea */
+input, textarea {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Escala ligeramente el input o textarea cuando el cursor está sobre ellos */
+input:hover, textarea:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos CONTACTO */
+
+/* -------------------------------------------------------------------------------------------*/
+
+/* -------------------------------------------------------------------------------------------*/
+
+/* carousel */
+
+/* transformacion carousel */
+:root{
+    --item1-transform: translateX(-100%) translateY(-5%) scale(1.5);
+    --item1-filter: blur(30px);
+    --item1-zIndex: 11;
+    --item1-opacity: 0;
+
+    --item2-transform: translateX(0);
+    --item2-filter: blur(0px);
+    --item2-zIndex: 10;
+    --item2-opacity: 1;
+
+    --item3-transform: translate(50%,10%) scale(0.8);
+    --item3-filter: blur(10px);
+    --item3-zIndex: 9;
+    --item3-opacity: 1;
+
+    --item4-transform: translate(90%,20%) scale(0.5);
+    --item4-filter: blur(30px);
+    --item4-zIndex: 8;
+    --item4-opacity: 1;
+
+    --item5-transform: translate(120%,30%) scale(0.3);
+    --item5-filter: blur(40px);
+    --item5-zIndex: 7;
+    --item5-opacity: 0;
+}
+
+.carousel {
+    opacity: 0; /* Inicialmente, el contenido está oculto */
+    transform: translateY(20px); /* Desplazamiento inicial hacia abajo */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Agrega transición para opacidad y transformación */
+}
+
+.carousel.show {
+    opacity: 1; /* Hace visible el contenido */
+    transform: translateY(0); /* Devuelve el contenido a su posición original */
+}
+
+.carousel{
+    position: relative;
+    height: 850px;
+    overflow: hidden;
+    margin-top: -50px;
+}
+.carousel .list{
+    position: absolute;
+    width: 1140px;
+    max-width: 90%;
+    height: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.carousel .list .item{
+    position: absolute;
+    left: 0%;
+    width: 70%;
+    height: 100%;
+    font-size: 15px;
+    transition: left 0.5s, opacity 0.5s, width 0.5s;
+}
+.carousel .list .item:nth-child(n + 6){
+    opacity: 0;
+}
+.carousel .list .item:nth-child(2){
+    z-index: 10;
+    transform: translateX(0);
+}
+.carousel .list .item img{
+    width: auto;
+    height: 60%;
+    position: absolute;
+    left:500px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: right 1.5s;
+}
+
+.carousel .list .item .introduce{
+    opacity: 0;
+    pointer-events: none;
+}
+.carousel .list .item:nth-child(2) .introduce{
+    opacity: 1;
+    pointer-events: auto;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    transform:  translateY(-50%);
+    transition: opacity 0.5s;
+}
+.carousel .list .item .introduce .title{
+    font-size: 2em;
+    font-weight: 500;
+    line-height: 1em;
+    font-family: "Poppins", sans-serif;
+}
+.carousel .list .item .introduce .topic{
+    font-size: 4em;
+    font-weight: 500;
+    font-family: Poppins;
+}
+.carousel .list .item .introduce .des{
+    font-size: medium;
+    color: white;
+}
+.carousel .list .item .introduce .seeMore{
+    margin-top: 1.2em;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #0687d5;
+    background-color: #0687d5;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 3px;
+    transition: background 0.5s;
+    width: 100%;
+    height: 35px;
+    border-radius: 5px; /* Establece bordes redondeados para el botón */
+}
+.carousel .list .item .introduce .seeMore:hover{
+    background: #0056b3;
+}
+.carousel .list .item:nth-child(1){
+    transform: var(--item1-transform);
+    filter: var(--item1-filter);
+    z-index: var(--item1-zIndex);
+    opacity: var(--item1-opacity);
+    pointer-events: none;
+}
+.carousel .list .item:nth-child(3){
+    transform: var(--item3-transform);
+    filter: var(--item3-filter);
+    z-index: var(--item3-zIndex);
+}
+.carousel .list .item:nth-child(4){
+    transform: var(--item4-transform);
+    filter: var(--item4-filter);
+    z-index: var(--item4-zIndex);
+}
+.carousel .list .item:nth-child(5){
+    transform: var(--item5-transform);
+    filter: var(--item5-filter);
+    opacity: var(--item5-opacity);
+    pointer-events: none;
+}
+/* animation text in item2 */
+.carousel .list .item:nth-child(2) .introduce .title,
+.carousel .list .item:nth-child(2) .introduce .topic,
+.carousel .list .item:nth-child(2) .introduce .des,
+.carousel .list .item:nth-child(2) .introduce .seeMore{
+    opacity: 0;
+    animation: showContent 0.5s 1s ease-in-out 1 forwards;
+}
+@keyframes showContent{
+    from{
+        transform: translateY(-30px);
+        filter: blur(10px);
+    }to{
+         transform: translateY(0);
+         opacity: 1;
+         filter: blur(0px);
+     }
+}
+.carousel .list .item:nth-child(2) .introduce .topic{
+    animation-delay: 1.0s;
+}
+.carousel .list .item:nth-child(2) .introduce .des{
+    animation-delay: 1.2s;
+}
+.carousel .list .item:nth-child(2) .introduce .seeMore{
+    animation-delay: 1.4s;
+}
+/* next click */
+.carousel.next .item:nth-child(1){
+    animation: transformFromPosition2 0.5s ease-in-out 1 forwards;
+}
+@keyframes transformFromPosition2{
+    from{
+        transform: var(--item2-transform);
+        filter: var(--item2-filter);
+        opacity: var(--item2-opacity);
+    }
+}
+.carousel.next .item:nth-child(2){
+    animation: transformFromPosition3 0.7s ease-in-out 1 forwards;
+}
+@keyframes transformFromPosition3{
+    from{
+        transform: var(--item3-transform);
+        filter: var(--item3-filter);
+        opacity: var(--item3-opacity);
+    }
+}
+.carousel.next .item:nth-child(3){
+    animation: transformFromPosition4 0.9s ease-in-out 1 forwards;
+}
+@keyframes transformFromPosition4{
+    from{
+        transform: var(--item4-transform);
+        filter: var(--item4-filter);
+        opacity: var(--item4-opacity);
+    }
+}
+.carousel.next .item:nth-child(4){
+    animation: transformFromPosition5 1.1s ease-in-out 1 forwards;
+}
+@keyframes transformFromPosition5{
+    from{
+        transform: var(--item5-transform);
+        filter: var(--item5-filter);
+        opacity: var(--item5-opacity);
+    }
+}
+/* previous */
+.carousel.prev .list .item:nth-child(5){
+    animation: transformFromPosition4 0.5s ease-in-out 1 forwards;
+}
+.carousel.prev .list .item:nth-child(4){
+    animation: transformFromPosition3 0.7s ease-in-out 1 forwards;
+}
+.carousel.prev .list .item:nth-child(3){
+    animation: transformFromPosition2 0.9s ease-in-out 1 forwards;
+}
+.carousel.prev .list .item:nth-child(2){
+    animation: transformFromPosition1 1.1s ease-in-out 1 forwards;
+}
+@keyframes transformFromPosition1{
+    from{
+        transform: var(--item1-transform);
+        filter: var(--item1-filter);
+        opacity: var(--item1-opacity);
+    }
+}
+
+/* detail  */
+.carousel .list .item .detail{
+    opacity: 0;
+    pointer-events: none;
+}
+/* showDetail */
+.carousel.showDetail .list .item:nth-child(3),
+.carousel.showDetail .list .item:nth-child(4){
+    left: 100%;
+    opacity: 0;
+    pointer-events: none;
+}
+.carousel.showDetail .list .item:nth-child(2){
+    width: 100%;
+}
+.carousel.showDetail .list .item:nth-child(2) .introduce{
+    opacity: 0;
+    pointer-events: none;
+}
+.carousel.showDetail .list .item:nth-child(2) img{
+    right: 50%;
+}
+.carousel.showDetail .list .item:nth-child(2) .detail{
+    opacity: 1;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+    pointer-events: auto;
+}
+.carousel.showDetail .list .item:nth-child(2) .detail .title{
+    font-size: 4em;
+}
+.carousel.showDetail .list .item:nth-child(2) .detail .specifications{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    border-top: 1px solid #5553;
+    margin-top: 20px;
+}
+.carousel.showDetail .list .item:nth-child(2) .detail .specifications div{
+    width: 90px;
+    text-align: center;
+    flex-shrink: 0;
+}
+.carousel.showDetail .list .item:nth-child(2) .detail .specifications div p:nth-child(1){
+    font-weight: bold;
+}
+.carousel.carousel.showDetail .list .item:nth-child(2) .checkout button{
+    background-color: transparent;
+    border: 1px solid #5555;
+    margin-left: 5px;
+    padding: 5px 10px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+.carousel.carousel.showDetail .list .item:nth-child(2) .checkout button:nth-child(2){
+    background-color: #693EFF;
+    color: #eee;
+}
+.carousel.showDetail .list .item:nth-child(2) .detail  .title,
+.carousel.showDetail .list .item:nth-child(2) .detail  .des,
+.carousel.showDetail .list .item:nth-child(2) .detail .specifications,
+.carousel.showDetail .list .item:nth-child(2) .detail .checkout{
+    opacity: 0;
+    animation: showContent 0.3s 1s ease-in-out 1 forwards;
+}
+.carousel.showDetail .list .item:nth-child(2) .detail  .des{
+    animation-delay: 1.2s;
+}
+.carousel.showDetail .list .item:nth-child(2) .detail .specifications{
+    animation-delay: 1.4s;
+}
+.carousel.showDetail .list .item:nth-child(2) .detail .checkout{
+    animation-delay: 1.6s;
+}
+.arrows{
+    position: absolute;
+    bottom: 150px;
+    width: 1140px;
+    max-width: 90%;
+    display: flex;
+    justify-content: space-between;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#prev,
+#next{
+    width: 50px;
+    height: 50px;
+    border-radius: 60%;
+    font-family: monospace;
+    border: 1px solid #5555;
+    font-size: 37px;
+    bottom: 20%;
+    left: 10%;
+    background-color: #af0061;
+    color: white;
+}
+
+#prev:hover,
+#next:hover{
+    background-color: #e11289;
+}
+/*/#next{
+    left: unset;
+    right: 10%;
+}*/
+#back{
+    position: absolute;
+    z-index: 100;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    border-bottom: 1px solid #555;
+    font-weight: bold;
+    letter-spacing: 3px;
+    background-color: transparent;
+    padding: 10px;
+    /* opacity: 0; */
+    transition: opacity 0.5s;
+}
+.carousel.showDetail #back{
+    opacity: 1;
+}
+.carousel.showDetail #prev,
+.carousel.showDetail #next{
+    opacity: 0;
+    pointer-events: none;
+}
+.carousel::before{
+    width: 500px;
+    height: 300px;
+    content: '';
+    background-image: linear-gradient(80deg, #007bff, #EB8545);
+    position: absolute;
+    z-index: -1;
+    border-radius: 20% 30% 80% 10%;
+    filter: blur(150px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%, -50%);
+    transition: 1s;
+}
+/*
+.carousel.showDetail::before{
+    transform: translate(-100%, -50%) rotate(90deg);
+    filter: blur(130px);
+}*/
+@media screen and (max-width: 991px){
+    /* ipad, tablets */
+    .carousel .list .item{
+        width: 90%;
+    }
+    .carousel.showDetail .list .item:nth-child(2) .detail .specifications{
+        overflow: auto;
+    }
+    .carousel.showDetail .list .item:nth-child(2) .detail .title{
+        font-size: 2em;
+    }
+}
+@media screen and (max-width: 767px){
+    /* mobile */
+    .carousel{
+        height: 600px;
+    }
+    .carousel .list .item{
+        width: 100%;
+        font-size: 10px;
+    }
+
+    .carousel .list{
+        height: 100%;
+    }
+    .carousel .list .item:nth-child(2) .introduce{
+        width: 50%;
+    }
+
+    .carousel .list .item img{
+        width: 40%;
+    }
+    .carousel.showDetail .list .item:nth-child(2) .detail{
+        backdrop-filter: blur(10px);
+        font-size: small;
+    }
+    .carousel .list .item:nth-child(2) .introduce .des,
+    .carousel.showDetail .list .item:nth-child(2) .detail .des{
+        height: 100px;
+        overflow: auto;
+    }
+    .carousel.showDetail .list .item:nth-child(2) .detail .checkout{
+        display: flex;
+        width: max-content;
+        float: right;
+    }
+}
+
+.carousel .btn{
+    top:5px;
+    position: relative;
+    background-color: #007bff;
+}
+
+/* Define la animación */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Comienza con opacidad cero */
+        transform: translateY(20px); /* Comienza ligeramente desplazado hacia abajo */
+    }
+    to {
+        opacity: 1; /* Opacidad completa al final */
+        transform: translateY(0); /* Sin desplazamiento al final */
+    }
+}
+
+/* Animación del carrusel */
+.carousel {
+    opacity: 0; /* Inicialmente, el carrusel está oculto */
+    transform: translateY(20px); /* Desplazamiento inicial hacia abajo */
+    animation: fadeIn 1s ease-in-out forwards; /* Animación de aparición con duración de 1 segundo */
+}
+
+.carousel.show {
+    opacity: 1; /* Hace visible el carrusel */
+    transform: translateY(0); /* Devuelve el carrusel a su posición original */
+}
+
+/* -------------------------------------------------------------------------------------------*/
+
+
+
+/* Estilos para dispositivos extra pequeños (teléfonos, 600px y menos) */
+@media only screen and (max-width: 600px) {
+    body {
+        /* Estilos específicos para el cuerpo de la página en dispositivos pequeños */
+        font-size: 14px;
+    }
+
+    .navbar {
+        color: #fff; /* Color del texto */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 28px; /* Espaciado interno horizontal del navbar */
+        position: fixed; /* Fija el navbar en la parte superior de la página */
+        top: 0; /* Alinea el navbar en la parte superior */
+        left: 0; /* Alinea el navbar en el extremo izquierdo */
+        right: 0; /* Alinea el navbar en el extremo derecho */
+        z-index: 1000; /* Asegura que el navbar esté por encima del contenido */
+    }
+
+    .logo-container {
+    }
+
+    /* Ocultar todos los elementos del navbar */
+    .li-perfil, .li-contacto, .li-proyectos, .li-servicios
+    {
+        display: none !important;
+    }
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+    }
+
+    .logo img {
+        width: 50px;
+        height: auto;
+        margin-right: 5px;
+    }
+
+    .logo span {
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        font-size: 24px; /* Ajusta el tamaño según sea necesario */
+    }
+
+    .nav-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links li {
+        display: inline-flex;
+        margin-left: 20px;
+    }
+
+    .nav-links li:first-child {
+        margin-left: 0;
+    }
+
+    .nav-links li a {
+        text-decoration: none;
+        color: white;
+    }
+    .cv-button img {
+        max-width: 100%;
+        height: auto;
+        display: inline-flex; /* Asegura que la imagen no tenga márgenes extra */
+    }
+    .li-perfil{
+        margin-left: 60px !important;
+    }
+
+    .li-contacto{
+        margin-right: 10px !important;
+    }
+    .li_CVES {
+        /* Elimina cualquier ancho explícito */
+        position: relative;
+        top: 10px;
+        width: 35px;
+        display: inline-flex; /* Muestra el elemento en línea con otros elementos */
+    }
+
+    .li_CVEN {
+        /* Elimina cualquier ancho explícito */
+        position: relative;
+        top: 10px;
+        width: 35px;
+        display: inline-flex; /* Muestra el elemento en línea con otros elementos */
+        margin-left: 0 !important; /* Ajusta el espacio entre este elemento y el siguiente */
+    }
+
+    /* Estilos para el interruptor de idiomas */
+
+    .language {
+        position: relative;
+        align-items: center !important;
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+    }
+
+    .language-switch {
+        position: relative;
+        display: inline-flex;
+        width: 54px;
+        height: 27px;
+        /* top: 7px; */
+        margin-left: 7px; /* Ajusta el espacio entre el botón del currículum vitae y el interruptor de idiomas */
+        margin-right: 7px; /* Ajusta el espacio entre el botón del currículum vitae y el interruptor de idiomas */
+    }
+
+    .language-switch input {
+        display: none;
+    }
+
+    .container-Hero {
+        flex-direction: column;
+    }
+
+    .hero{
+        text-align: -webkit-center;
+        display: table-cell;
+    }
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-content {
+        margin-top: 20px; /* Agrega un margen superior para separar el contenido de la imagen */
+        opacity: 1; /* Asegura que el contenido sea visible */
+        transform: translateY(0); /* Asegura que el contenido no tenga transformación */
+        transition: none; /* Elimina cualquier transición */
+    }
+
+    .tools-grid {
+        display: flex; /* Utiliza flexbox */
+        flex-direction: column; /* Cambia la dirección de flexión a columnas */
+    }
+
+    .tool-category {
+        margin-bottom: 20px; /* Añade espacio entre las categorías */
+        height: auto; /* Permite que la altura se ajuste automáticamente según el contenido */
+    }
+
+    .ani-container {
+        height: auto;
+        margin-bottom: 100px;
+    }
+
+    .ani-container {
+        /* Elimina la animación de aparición lateral */
+        animation: none !important;
+    }
+    .tools-container {
+        /* Elimina la animación de aparición lateral */
+        animation: none;
+        opacity: inherit;
+        margin-bottom: 50px;
+        text-align: -webkit-center;
+    }
+
+    .section-title{
+        margin-left: -40px;
+    }
+
+
+    .carousel{
+        position: relative;
+        height: 700px;
+        overflow: hidden;
+        margin-top: -50px;
+    }
+    .carousel .list{
+        position: absolute;
+        width: 500px;
+        max-width: 90%;
+        height: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .carousel .list .item{
+        position: absolute;
+        left: 0%;
+        width: 70%;
+        height: 100%;
+        font-size: 15px;
+        transition: left 0.5s, opacity 0.5s, width 0.5s;
+    }
+    .carousel .list .item:nth-child(n + 6){
+        opacity: 0;
+    }
+    .carousel .list .item:nth-child(2){
+        z-index: 10;
+        transform: translateX(0);
+    }
+    .carousel .list .item img{
+        width: 550px;
+        height: auto;
+        position: absolute;
+        left:0;
+        right: 0;
+        top: 30%;
+        transform: translateY(-50%);
+        transition: right 1.5s;
+    }
+
+    .carousel .list .item .introduce{
+        opacity: 0;
+        pointer-events: none;
+    }
+    .carousel .list .item:nth-child(2) .introduce{
+        opacity: 1;
+        pointer-events: auto;
+        width: 400px;
+        position: absolute;
+        top: 50%;
+        transform:  translateY(-50%);
+        transition: opacity 0.5s;
+    }
+    .carousel .list .item .introduce .title{
+        font-size: 2em;
+        font-weight: 500;
+        line-height: 1em;
+        font-family: "Poppins", sans-serif;
+    }
+    .carousel .list .item .introduce .topic{
+        font-size: 4em;
+        font-weight: 500;
+        font-family: Poppins;
+    }
+    .carousel .list .item .introduce .des{
+        font-size: medium;
+        color: white;
+    }
+    .carousel .list .item .introduce .seeMore{
+        margin-top: 1.2em;
+        padding: 5px;
+        border: none;
+        border-bottom: 1px solid #0687d5;
+        background-color: #0687d5;
+        color: white;
+        font-size: 15px;
+        letter-spacing: 3px;
+        transition: background 0.5s;
+        width: 100%;
+        height: 35px;
+        border-radius: 5px; /* Establece bordes redondeados para el botón */
+    }
+    .arrows{
+        opacity: 0;
+    }
+
+    .introduce {
+        margin-top: 220px;
+    }
+    .container-contacto{
+        margin-bottom: 50px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px ) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

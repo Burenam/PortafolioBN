@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicons -->
+    <!-- Enlace al favicon -->
+    <link rel="icon" href="Imagenes/BS.png" type="image/png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- Enlaza la biblioteca de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="Inicio.css">
+
+    <title>Título de tu página</title>
+    <!-- Aquí puedes incluir otros metadatos, como descripción, autor, etc. -->
+</head>
+<body>
+
+<nav class="navbar">
+    <!-- Logo de Braysoft y nombre -->
+    <div class="logo-container">
+        <a href="#" class="logo">
+            <img src="Imagenes/Logo.png" alt="Braysoft">
+            <span>BraySoft</span>
+        </a>
+    </div>
+    <!-- Enlaces del navbar -->
+    <ul class="nav-links">
+        <li class="li-perfil"><a href="#">Mi Perfil</a></li>
+        <li class="li-servicios"><a href="#">Servicios</a></li>
+        <li class="li-proyectos"><a href="#">Proyectos</a></li>
+        <li class="li-contacto"><a href="#">Contacto</a></li>
+
+        <!-- Botón CV_ES -->
+        <li class="li_CVES">
+            <a id="downloadCVSpanish" class="cv-button">
+                <img src="Imagenes/CV_ES.png" alt="CV ES">
+            </a>
+        </li>
+        <li class="language">
+            <!-- Interruptor de idiomas -->
+            <span class="language-text">ES</span>
+            <label class="language-switch">
+                <input type="checkbox" id="languageSwitch" onclick="toggleLanguage()">
+                <span class="slider round"></span>
+            </label>
+            <span class="language-text">EN</span>
+        </li>
+
+        <!-- Botón con imagen CV_EN -->
+        <li class="li_CVEN">
+            <a id="downloadCVEnglish" class="cv-button">
+                <img src="Imagenes/CV_EN.png" alt="CV EN">
+            </a>
+        </li>
+    </ul>
+</nav>
+
+
+
+<!-- Contenido a traducir -->
+<div id="content">
+
+    <!-- Hero -->
+    <div class="hero" >
+        <div class="hero-content">
+            <div class="container-Hero">
+                <div class="container-Hero1">
+                    <h1>Hola, Mi nombre es </h1>
+                </div>
+                <div class="container-Hero2">
+                    <h1> Braylie Ureña.</h1>
+                </div>
+            </div>
+            <p class="animated-text">Ingeniera de Software apasionada y comprometida, con conocimientos en el desarrollo de proyectos frontend y backend, y con una gran capacidad de adaptación a nuevos desafíos tecnológicos.</p>
+            <a href="https://github.com/Burenam/PortafolioBraylieUre-a/blob/main/Portada.md" class="btn">Conóceme más</a>
+        </div>
+        <img src="Imagenes/Hero.png" alt="Descripción de la imagen">
+    </div>
+    <!-- Hero -->
+
+    <div class="ani-container">
+
+    <!-- Herramientas -->
+    <div class="tools-container">
+        <h2 class="section-title">Herramientas Tecnológicas</h2>
+        <p class="intro-text1">Bienvenidos a mi mundo de desarrollo, desde la creación de interfaces atractivas hasta la magia detrás de escena, estoy preparada para llevar tus ideas a la vida.</p>
+        <p class="intro-text2">Con habilidades tanto en front-end como en back-end, puedo construir experiencias digitales que cautivan y hacen brillar tu proyecto.</p>
+        <div class="divider"></div>
+        <div class="tools-grid">
+            <div class="tool-category" style="background-color: #0687d5;">
+                <h3 class="category-title">Front-end:</h3>
+                <ul class="tool-list">
+                    <li><i class="fa-brands fa-html5"></i> HTML</li>
+                    <li><i class="fab fa-css3-alt"></i> CSS</li>
+                    <li><i class="fab fa-js"></i> JavaScript</li>
+                    <li><i class="fab fa-react"></i> React</li>
+                    <li><i class="fab fa-bootstrap"></i> Bootstrap</li>
+                    <li><i class="fab fa-js"></i> jQuery</li>
+                    <li><i class="fab fa-angular"></i> Angular</li>
+                </ul>
+            </div>
+            <div class="tool-category" style="background-color: #af0061;">
+                <h3 class="category-title">Back-end:</h3>
+                <ul class="tool-list">
+                    <li><i class="fab fa-java"></i> Java</li>
+                    <li><i class="fab fa-spring"></i> Spring Boot</li>
+                    <li><i class="fab fa-windows"></i> C#</li>
+                    <li><i class="fab fa-windows"></i> ASP.NET</li>
+                </ul>
+            </div>
+            <div class="tool-category" style="background-color: #EB8545;">
+                <h3 class="category-title">Bases de Datos:</h3>
+                <ul class="tool-list">
+                    <li><i class="fi fi-brands-oracle"></i> Oracle</li>
+                    <li><i class="fab fa-envira"></i> MongoDB</li>
+                    <li><i class="fas fa-database"></i> MySQL</li>
+                    <li><i class="fas fa-database"></i> Microsoft SQL Server</li>
+                </ul>
+            </div>
+            <div class="tool-category" style="background-color: #0687d5;">
+                <h3 class="category-title">Otros:</h3>
+                <ul class="tool-list">
+                    <li><i class="fab fa-git"></i> Git</li>
+                    <li><i class="fab fa-bitbucket"></i> Bitbucket Pipelines</li>
+                    <li><i class="fab fa-aws"></i> AWS</li>
+                    <li><i class="fab fa-microsoft"></i> Azure DevOps</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="slider2">
+        <ul>
+            <li>
+                <img src="Imagenes/Iconos/html.png" alt=""> HTML
+            </li>
+            <li>
+                <img src="Imagenes/Iconos/css.png" alt=""> CSS
+            </li>
+            <li>
+                <img src="Imagenes/Iconos/JS.png" alt=""> JavaScript
+            </li>
+            <li>
+                <img src="Imagenes/Iconos/React.png" alt=""> React
+            </li>
+            <li>
+                <img src="Imagenes/Iconos/bootstrap.png" alt=""> Bootstrap
+            </li>
+            <li>
+                <img src="Imagenes/Iconos/jquery.png" alt=""> jQuery
+            </li>
+            <li>
+                <img src="Imagenes/Iconos/angular.png" alt=""> Angular
+            </li>
+            <li>
+                <img src="Imagenes/Iconos/java.png" alt=""> Java
+            </li>
+            <li>
+                <img src="Imagenes/Iconos/spring.png" alt=""> Spring Boot
+            </li>
+            <li>
+                <img src="Imagenes/Iconos/csharp.png" alt=""> C#
+            </li>
+            <li>
+                <img src="Imagenes/Iconos/aspnet.png" alt=""> ASP.NET
+            </li>
+            <li>
+                <img src="Imagenes/Iconos/oracle.png" alt=""> Oracle
+            </li>
+            <li>
+                <img src="Imagenes/Iconos/mongodb.png" alt=""> MongoDB
+            </li>
+            <li>
+                <img src="Imagenes/Iconos/mysql.png" alt=""> MySQL
+            </li>
+            <li>
+                <img src="Imagenes/Iconos/sqlserver.png" alt=""> Microsoft SQL Server
+            </li>
+            <li>
+                <img src="Imagenes/Iconos/Git.png" alt=""> Git
+            </li>
+            <li>
+                <img src="Imagenes/Iconos/bitbucket.png" alt=""> Bitbucket Pipelines
+            </li>
+            <li>
+                <img src="Imagenes/Iconos/AWS.png" alt=""> AWS
+            </li>
+            <li>
+                <img src="Imagenes/Iconos/azuredevops.png" alt=""> Azure DevOps
+            </li>
+        </ul>
+    </div>
+
+    </div>
+    <!-- Herramientas -->
+
+    <!-- Proyectos -->
+    <div class="carousel">
+        <div class="list">
+            <div class="item">
+                <img src="Imagenes/Proyecto1_SmartBit.png">
+                <div class="introduce">
+                    <div class="title">Proyecto</div>
+                    <div class="topic">SmartBit</div>
+                    <div class="des">
+                        SmartBit es una emocionante aplicación web diseñada para simplificar la experiencia de compra de tiquetes para eventos. Con SmartBit, la organización de eventos y la compra de tiquetes es simple y conveniente.
+                    </div>
+                    <button class="seeMore" onclick="redirectToGitHub()">Ver más</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Imagenes/Proyecto2_TicoPark.png">
+                <div class="introduce">
+                    <div class="title">Proyecto</div>
+                    <div class="topic">Tico Park</div>
+                    <div class="des">
+                        TicoPark es una solución innovadora para facilitar el proceso de reserva de parqueos, brindando a los usuarios la conveniencia de reservar en línea y garantizar un lugar disponible cuando más lo necesitan.
+                    </div>
+                    <button class="seeMore" onclick="redirectToGitHub()">Ver más</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Imagenes/Proyecto3_DSO1.png">
+                <div class="introduce">
+                    <div class="title">Proyecto</div>
+                    <div class="topic">DSO1</div>
+                    <div class="des">
+                        DSO1 ofrece una plataforma intuitiva donde los empleados pueden acceder a comunicados, actualizaciones y recursos importantes de la empresa de manera rápida y sencilla. etes es simple y conveniente.
+                    </div>
+                    <button class="seeMore">Ver más</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Imagenes/Proyecto4_DiseñoConceptual.png">
+                <div class="introduce">
+                    <div class="title">Proyecto</div>
+                    <div class="topic">Inventario</div>
+                    <div class="des">
+                        Esta plataforma facilita la gestión y optimización de los recursos empresariales, brindando una visión clara y actualizada del inventario de equipos dentro de la empresa.
+                    </div>
+                    <button class="seeMore">Ver más</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Imagenes/Proyecto5_React.png">
+                <div class="introduce">
+                    <div class="title">Proyecto</div>
+                    <div class="topic">Marcas</div>
+                    <div class="des">
+                        Una plataforma diseñada para que los tramitadores del sistema puedan gestionar y aprobar el registro de marcas nacionales.
+                    </div>
+                    <button class="seeMore">Ver más</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Imagenes/Proyecto6_Calculadora.png">
+                <div class="introduce">
+                    <div class="title">Proyecto</div>
+                    <div class="topic">Calculadora</div>
+                    <div class="des">
+                        Una aplicación simple pero útil que proporciona funciones de cálculo básicas. Esta aplicación de calculadora está diseñada para realizar operaciones matemáticas cotidianas de manera rápida y eficiente.
+                    </div>
+                    <button class="seeMore">Ver más</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Imagenes/Proyecto7_Patrones.png">
+                <div class="introduce">
+                    <div class="title">Proyecto</div>
+                    <div class="topic">Abeja VS Panda</div>
+                    <div class="des">
+                        Un emocionante juego de acción donde los jugadores asumen el papel de una nave espacial, enfrentándose a desafíos y enemigos en un entorno cósmico.
+                    </div>
+                    <button class="seeMore">Ver más</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Imagenes/Proyecto8_EstructurasDatos.png">
+                <div class="introduce">
+                    <div class="title">Proyecto</div>
+                    <div class="topic">Reserva de Entradas</div>
+                    <div class="des">
+                        Una aplicación de consola diseñada para facilitar la reserva de entradas para funciones de teatro. Con esta herramienta, los usuarios pueden explorar las diferentes obras y horarios disponibles, seleccionar sus asientos preferidos y confirmar su reserva de manera rápida y sencilla.
+                    </div>
+                    <button class="seeMore">Ver más</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Imagenes/Proyecto9_Java.png">
+                <div class="introduce">
+                    <div class="title">Proyecto</div>
+                    <div class="topic">Productores</div>
+                    <div class="des">
+                        Una aplicación de consola diseñada para el registro y gestión de productores de leche. Este proyecto permite a los usuarios ingresar información detallada sobre los productores, incluyendo datos como ventas de botellas, costos y pagos de productores.
+                    </div>
+                    <button class="seeMore">Ver más</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="Imagenes/Proyecto10_GrupalEstructuras.png">
+                <div class="introduce">
+                    <div class="title">Proyecto</div>
+                    <div class="topic">Librería</div>
+                    <div class="des">
+                        Este proyecto de consola está diseñado para gestionar el inventario de una librería de manera eficiente. Permite a los usuarios administrar una amplia variedad de libros, organizarlos por categorías, generar reportes y estadísticas útiles.
+                    </div>
+                    <button class="seeMore">Ver más</button>
+                </div>
+            </div>
+
+            <!-- Agrega más slides aquí si es necesario -->
+
+        </div>
+        <div class="arrows">
+            <button id="prev">&lt;</button>
+            <button id="next">&gt;</button>
+            <button id="back">Ver todo</button>
+        </div>
+    </div>
+    <!-- Proyectos -->
+
+    <!-- Contacto -->
+    <div class="container-contacto">
+        <h1>Formulario de Contacto</h1>
+        <form id="contact-form">
+            <label for="from_name">Nombre Completo:</label>
+            <input type="text" id="from_name" name="from_name" required>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="number">Número telefónico:</label>
+            <input type="text" id="number" name="number" required>
+
+            <label for="message1">Mensaje:</label>
+            <textarea id="message1" name="message1" rows="4" required></textarea>
+
+            <button type="submit" class="submit-button" id="submit-button">Enviar Mensaje</button>
+        </form>
+    </div>
+    <!-- Contacto -->
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/50688019033" target="_blank" class="whatsapp-button">
+        <!-- Icono de WhatsApp -->
+        <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+    </a>
+</div>
+
+<!-- Contenido a traducir -->
+<button id="scrollTopButton">
+    <i class="fa-solid fa-angle-up fa-2xl"></i>
+</button>
+
+<footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2024 BraySoft.</p>
+        <div class="social-links">
+            <a href="https://github.com/Burenam/PortafolioBraylieUre-a"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/braylieure%C3%B1a/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://wa.me/50688019033"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+</footer>
+
+<!-- Agrega el script de EmailJS -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script src="Inicio.js"></script>
+</body>
+</html>
