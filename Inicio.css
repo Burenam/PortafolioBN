@@ -1389,6 +1389,8 @@ input:hover, textarea:hover {
         font-size: medium;
         color: white;
         height: 30px;
+        width: 90%;
+
     }
     .carousel .list .item .introduce .seeMore{
         margin-top: 1.2em;
