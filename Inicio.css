@@ -1363,6 +1363,7 @@ input:hover, textarea:hover {
     .carousel .list .item .introduce{
         opacity: 0;
         pointer-events: none;
+        margin-top: 220px;
     }
     .carousel .list .item:nth-child(2) .introduce{
         opacity: 1;
@@ -1387,6 +1388,7 @@ input:hover, textarea:hover {
     .carousel .list .item .introduce .des{
         font-size: medium;
         color: white;
+        height: 30px;
     }
     .carousel .list .item .introduce .seeMore{
         margin-top: 1.2em;
