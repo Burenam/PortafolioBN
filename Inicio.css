@@ -1231,7 +1231,7 @@ input:hover, textarea:hover {
         /* Elimina cualquier ancho explícito */
         position: relative;
         top: 10px;
-        width: 35px;
+        width: 30px;
         display: inline-flex; /* Muestra el elemento en línea con otros elementos */
     }
 
@@ -1239,7 +1239,7 @@ input:hover, textarea:hover {
         /* Elimina cualquier ancho explícito */
         position: relative;
         top: 10px;
-        width: 35px;
+        width: 30px;
         display: inline-flex; /* Muestra el elemento en línea con otros elementos */
         margin-left: 0 !important; /* Ajusta el espacio entre este elemento y el siguiente */
     }
