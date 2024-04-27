@@ -1327,10 +1327,10 @@ input:hover, textarea:hover {
     }
     .carousel .list{
         position: absolute;
-        width: 95%;
+        width: 90%;
         max-width: 90%;
         height: 80%;
-        left: 50%;
+        left: 46%;
         margin-bottom: 10px;
         transform: translateX(-50%);
     }
