@@ -1155,7 +1155,7 @@ input:hover, textarea:hover {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 28px; /* Espaciado interno horizontal del navbar */
+        padding: 10px 5px; /* Espaciado interno horizontal del navbar */
         position: fixed; /* Fija el navbar en la parte superior de la página */
         top: 0; /* Alinea el navbar en la parte superior */
         left: 0; /* Alinea el navbar en el extremo izquierdo */
