@@ -75,7 +75,7 @@ function toggleLanguage() {
 // Función para traducir el contenido
 function translateContent(content, targetLanguage) {
     // Obtiene todos los elementos de texto dentro del contenedor
-    const textElements = content.querySelectorAll("h1, p, a:not(:has(img)), span, h2, button, label, input, .introduce .title, .introduce .topic, .introduce .des");
+    const textElements = content.querySelectorAll("h1, p, a:not(:has(img)):not(.contact-card), span, h2, button, label, input, .introduce .title, .introduce .topic, .introduce .des");
 
     // Itera sobre cada elemento y traduce su contenido
     textElements.forEach(element => {
@@ -125,8 +125,8 @@ function translateNavbar(navbar, targetLanguage) {
     });
 }
 
-// Traducción inicial al español
-toggleLanguage();
+// La página ya carga en español, por lo que no es necesario traducirla al iniciar.
+// El cambio de idioma se ejecuta únicamente cuando el usuario utiliza el interruptor.
 
 // TRADUCTOR
 
@@ -179,50 +179,8 @@ document.getElementById("downloadCVEnglish").addEventListener("click", function(
 //-------------------------------------------------------------------------------------------
 
 // CONTACTO
-
-// Inicializa EmailJS con tu Public Key
-emailjs.init('uv24-4wtcIf-Upy4C');
-
-// Maneja el envío del formulario
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita que se envíe el formulario
-
-    // Obtiene los valores del formulario
-    var from_name = document.getElementById('from_name').value;
-    var to_name = "Braylie Ureña";
-    var email = document.getElementById('email').value;
-    var number = document.getElementById('number').value;
-    var message1 = document.getElementById('message1').value;
-
-    message = message1+ " Correo electronico: " + email + " Numero Telefonico: " + number;
-
-    // Imprime los valores de los parámetros por consola
-    console.log('from_name:', from_name);
-    console.log('to_name:', to_name);
-    console.log('message:', message);
-
-
-    // Envía el correo electrónico utilizando EmailJS
-    emailjs.send('service_69g25n7', 'template_nge53nf', {
-        from_name: from_name,
-        to_name: to_name,
-        message: message
-    }).then(function(response) {
-        console.log('Correo electrónico enviado:', response);
-        alert('¡Mensaje enviado con éxito!');
-        // Limpia los campos del formulario después del envío
-        document.getElementById('from_name').value = '';
-        document.getElementById('to_name').value = '';
-        document.getElementById('email').value = '';
-        document.getElementById('number').value = '';
-        document.getElementById('message1').value = '';
-    }, function(error) {
-        console.error('Error al enviar el correo electrónico:', error);
-        alert('Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.');
-    });
-});
-
-// CONTACTO
+// La sección de contacto utiliza enlaces directos a LinkedIn, WhatsApp,
+// correo electrónico, GitHub y teléfono; no requiere EmailJS.
 
 //-------------------------------------------------------------------------------------------
 
@@ -309,10 +267,8 @@ carousel.addEventListener("mouseenter", reduceSpeed);
 // Restablece la velocidad del carrusel cuando el cursor se aleja
 carousel.addEventListener("mouseleave", resetSpeed);
 
-// Inicia el carrusel automáticamente al cargar la página
-window.addEventListener('load', () => {
-    autoNextSlider();
-});
+// El carrusel ya se inicia automáticamente con setInterval.
+// No se avanza de inmediato al cargar para conservar ServiYa como proyecto destacado.
 
 // CARRUSEL
 
@@ -358,17 +314,6 @@ document.addEventListener("scroll", activateAnimation);
 //-------------------------------------------------------------------------------------------
 
 // ANIMACION HERO
-
-// Función para verificar si el elemento está en el viewport
-function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
 
 // Función para activar la animación cuando las herramientas están visibles
 function activateToolsAnimation() {
@@ -496,4 +441,3 @@ function activateCarouselAnimation() {
 // Ejecuta la función al cargar la página y al desplazarse la página
 window.addEventListener("load", activateCarouselAnimation);
 document.addEventListener("scroll", activateCarouselAnimation);
-
