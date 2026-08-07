@@ -75,7 +75,7 @@ function toggleLanguage() {
 // Función para traducir el contenido
 function translateContent(content, targetLanguage) {
     // Obtiene todos los elementos de texto dentro del contenedor
-    const textElements = content.querySelectorAll("h1, p, a:not(:has(img)):not(.contact-card), span, h2, button, label, input, .introduce .title, .introduce .topic, .introduce .des");
+    const textElements = content.querySelectorAll("h1, h2, p, a:not(:has(img)):not(.contact-card), .contact-card .contact-label, .contact-card .contact-action, button, label, .introduce .title, .introduce .topic, .introduce .des");
 
     // Itera sobre cada elemento y traduce su contenido
     textElements.forEach(element => {
@@ -125,8 +125,8 @@ function translateNavbar(navbar, targetLanguage) {
     });
 }
 
-// La página ya carga en español, por lo que no es necesario traducirla al iniciar.
-// El cambio de idioma se ejecuta únicamente cuando el usuario utiliza el interruptor.
+// La página ya carga en español.
+// La traducción solo se ejecuta cuando el usuario cambia el interruptor de idioma.
 
 // TRADUCTOR
 
@@ -179,8 +179,7 @@ document.getElementById("downloadCVEnglish").addEventListener("click", function(
 //-------------------------------------------------------------------------------------------
 
 // CONTACTO
-// La sección de contacto utiliza enlaces directos a LinkedIn, WhatsApp,
-// correo electrónico, GitHub y teléfono; no requiere EmailJS.
+// Los medios de contacto utilizan enlaces directos y no requieren EmailJS.
 
 //-------------------------------------------------------------------------------------------
 
@@ -189,105 +188,118 @@ document.getElementById("downloadCVEnglish").addEventListener("click", function(
 
 // CARRUSEL
 
-let nextButton = document.getElementById('next');
-let prevButton = document.getElementById('prev');
-let carousel = document.querySelector('.carousel');
-let listHTML = document.querySelector('.carousel .list');
-let seeMoreButtons = document.querySelectorAll('.seeMore');
-let backButton = document.getElementById('back');
+document.addEventListener("DOMContentLoaded", function () {
+    const nextButton = document.getElementById("next");
+    const prevButton = document.getElementById("prev");
+    const carousel = document.querySelector(".carousel");
+    const listHTML = document.querySelector(".carousel .list");
+    const backButton = document.getElementById("back");
+    const seeMoreButtons = document.querySelectorAll(".seeMore");
 
-nextButton.onclick = function(){
-    showSlider('next');
-}
-prevButton.onclick = function(){
-    showSlider('prev');
-}
-let unAcceppClick;
-const showSlider = (type) => {
-    nextButton.style.pointerEvents = 'none';
-    prevButton.style.pointerEvents = 'none';
-
-    carousel.classList.remove('next', 'prev');
-    let items = document.querySelectorAll('.carousel .list .item');
-    if(type === 'next'){
-        listHTML.appendChild(items[0]);
-        carousel.classList.add('next');
-    }else{
-        listHTML.prepend(items[items.length - 1]);
-        carousel.classList.add('prev');
+    if (!nextButton || !prevButton || !carousel || !listHTML) {
+        console.warn("No se pudo inicializar el carrusel.");
+        return;
     }
-    clearTimeout(unAcceppClick);
-    unAcceppClick = setTimeout(()=>{
-        nextButton.style.pointerEvents = 'auto';
-        prevButton.style.pointerEvents = 'auto';
-    }, 2000)
-}
-seeMoreButtons.forEach((button) => {
-    button.onclick = redirectToGitHub; // Llama directamente a redirectToGitHub cuando se hace clic en el botón
+
+    let unlockClickTimeout;
+    let autoSliderInterval;
+
+    function showSlider(type) {
+        const items = listHTML.querySelectorAll(".item");
+
+        if (items.length < 2) {
+            return;
+        }
+
+        nextButton.style.pointerEvents = "none";
+        prevButton.style.pointerEvents = "none";
+
+        carousel.classList.remove("next", "prev");
+
+        if (type === "next") {
+            listHTML.appendChild(items[0]);
+            carousel.classList.add("next");
+        } else {
+            listHTML.prepend(items[items.length - 1]);
+            carousel.classList.add("prev");
+        }
+
+        clearTimeout(unlockClickTimeout);
+        unlockClickTimeout = setTimeout(function () {
+            nextButton.style.pointerEvents = "auto";
+            prevButton.style.pointerEvents = "auto";
+        }, 1200);
+    }
+
+    nextButton.addEventListener("click", function () {
+        showSlider("next");
+    });
+
+    prevButton.addEventListener("click", function () {
+        showSlider("prev");
+    });
+
+    if (backButton) {
+        backButton.addEventListener("click", function () {
+            carousel.classList.remove("showDetail");
+        });
+    }
+
+    seeMoreButtons.forEach(function (button) {
+        button.addEventListener("click", redirectToGitHub);
+    });
+
+    const intervaloNormal = 5000;
+    const intervaloHover = 7000;
+
+    function startAutoSlider(delay = intervaloNormal) {
+        clearInterval(autoSliderInterval);
+        autoSliderInterval = setInterval(function () {
+            showSlider("next");
+        }, delay);
+    }
+
+    carousel.addEventListener("mouseenter", function () {
+        startAutoSlider(intervaloHover);
+    });
+
+    carousel.addEventListener("mouseleave", function () {
+        startAutoSlider(intervaloNormal);
+    });
+
+    // Inicia después de 5 segundos; NO mueve el proyecto inmediatamente al cargar.
+    startAutoSlider();
 });
-backButton.onclick = function(){
-    carousel.classList.remove('showDetail');
-}
 
 function redirectToGitHub() {
     window.location.href = "https://github.com/Burenam/PortafolioBraylieUre-a";
 }
 
-
-
-
-// Establece el intervalo en milisegundos (por ejemplo, 5 segundos)
-const intervaloNormal = 5000; // Intervalo normal
-const intervaloHover = 7000; // Intervalo cuando el cursor está sobre el carrusel
-
-// Función para avanzar al siguiente slider automáticamente
-function autoNextSlider() {
-    // Llama a la función showSlider con 'next' como argumento para mostrar el siguiente slider
-    showSlider('next');
-}
-
-// Configura el intervalo para llamar a autoNextSlider cada cierto tiempo
-let autoSliderInterval = setInterval(autoNextSlider, intervaloNormal);
-
-// Función para reducir la velocidad del carrusel cuando el cursor está sobre él
-function reduceSpeed() {
-    clearInterval(autoSliderInterval); // Detiene el intervalo actual
-    autoSliderInterval = setInterval(autoNextSlider, intervaloHover); // Establece un intervalo más largo
-}
-
-// Función para restablecer la velocidad del carrusel cuando el cursor se aleja
-function resetSpeed() {
-    clearInterval(autoSliderInterval); // Detiene el intervalo actual
-    autoSliderInterval = setInterval(autoNextSlider, intervaloNormal); // Restablece el intervalo normal
-}
-
-// Reduce la velocidad del carrusel cuando el cursor está sobre él
-carousel.addEventListener("mouseenter", reduceSpeed);
-
-// Restablece la velocidad del carrusel cuando el cursor se aleja
-carousel.addEventListener("mouseleave", resetSpeed);
-
-// El carrusel ya se inicia automáticamente con setInterval.
-// No se avanza de inmediato al cargar para conservar ServiYa como proyecto destacado.
-
 // CARRUSEL
 
 //-------------------------------------------------------------------------------------------
 
-// Función para verificar si el elemento está en el viewport
+// Función para verificar si al menos una parte del elemento está visible.
 function isInViewport(element) {
+    if (!element) return false;
+
     const rect = element.getBoundingClientRect();
+    const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+    const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+
     return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        rect.bottom > 0 &&
+        rect.right > 0 &&
+        rect.top < viewportHeight &&
+        rect.left < viewportWidth
     );
 }
 
 // Función para activar la animación cuando el héroe está visible
 function activateAnimation() {
     const heroContent = document.querySelector(".hero-content");
+
+    if (!heroContent) return;
 
     if (isInViewport(heroContent)) {
         // Si el contenido del héroe está visible, añade la clase 'show' para activar la animación
@@ -303,6 +315,7 @@ function activateAnimation() {
 }
 
 // Ejecuta la función al cargar la página y al desplazarse la página
+document.addEventListener("DOMContentLoaded", activateAnimation);
 window.addEventListener("load", activateAnimation);
 document.addEventListener("scroll", activateAnimation);
 
@@ -314,6 +327,8 @@ document.addEventListener("scroll", activateAnimation);
 //-------------------------------------------------------------------------------------------
 
 // ANIMACION HERO
+
+
 
 // Función para activar la animación cuando las herramientas están visibles
 function activateToolsAnimation() {
